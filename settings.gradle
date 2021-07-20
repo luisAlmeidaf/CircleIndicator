@@ -1,0 +1,2 @@
+rootProject.name = "CircleIndicator"
+include ':app'
