@@ -13,6 +13,8 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var imagesAdapter: ImagesAdapter
+    private lateinit var pagerSnapHelper: PagerSnapHelper
+    private lateinit var circleIndicator: CircleIndicator
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,23 +24,27 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         setupViews()
+        addPageSnapHelper()
+        createImagesAdapter()
         setupRecyclerView()
     }
 
     private fun setupViews() {
         recyclerView = findViewById(R.id.rv_image_gallery)
+        circleIndicator = findViewById(R.id.indicator)
+    }
+
+    private fun addPageSnapHelper() {
+        pagerSnapHelper = PagerSnapHelper()
+        pagerSnapHelper.attachToRecyclerView(recyclerView)
+    }
+
+    private fun createImagesAdapter() {
+        imagesAdapter = ImagesAdapter()
+        imagesAdapter.submitList(imagesList)
     }
 
     private fun setupRecyclerView() {
-
-        val pagerSnapHelper = PagerSnapHelper()
-        pagerSnapHelper.attachToRecyclerView(recyclerView)
-
-        imagesAdapter = ImagesAdapter()
-        imagesAdapter.submitList(imagesList)
-
-        val circleIndicator = findViewById<CircleIndicator>(R.id.indicator)
-
         recyclerView.apply {
             this.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             adapter = imagesAdapter

@@ -46,16 +46,16 @@ class CircleIndicator : BaseCircleIndicator {
     }
 
     private fun createIndicators() {
-        val adapter = mRecyclerView!!.adapter
+        val adapter = mRecyclerView.adapter
         val count: Int = adapter?.itemCount ?: 0
-        createIndicators(count, getSnapPosition(mRecyclerView!!.layoutManager))
+        createIndicators(count, getSnapPosition(mRecyclerView.layoutManager))
     }
 
     fun getSnapPosition(@Nullable layoutManager: RecyclerView.LayoutManager?): Int {
         if (layoutManager == null) {
             return RecyclerView.NO_POSITION
         }
-        val snapView = mSnapHelper!!.findSnapView(layoutManager) ?: return RecyclerView.NO_POSITION
+        val snapView = mSnapHelper.findSnapView(layoutManager) ?: return RecyclerView.NO_POSITION
         return layoutManager.getPosition(snapView)
     }
 
@@ -73,17 +73,14 @@ class CircleIndicator : BaseCircleIndicator {
     val adapterDataObserver: AdapterDataObserver = object : AdapterDataObserver() {
         override fun onChanged() {
             super.onChanged()
-            if (mRecyclerView == null) {
-                return
-            }
-            val adapter = mRecyclerView!!.adapter
+            val adapter = mRecyclerView.adapter
             val newCount = adapter?.itemCount ?: 0
             val currentCount = childCount
             if (newCount == currentCount) {
                 // No change
                 return
             } else if (mLastPosition < newCount) {
-                mLastPosition = getSnapPosition(mRecyclerView!!.layoutManager)
+                mLastPosition = getSnapPosition(mRecyclerView.layoutManager)
             } else {
                 mLastPosition = RecyclerView.NO_POSITION
             }
