@@ -8,6 +8,8 @@ The main goals of this personal project were:
 * Migrate Java code to Kotlin, following the Clean Code guidelines as much as possible.
 * Allow control of height and width of selected and deselected indicators alone.
 
+<img src="circle_indicator.gif" width="280">
+
 Usages:
 
 ### Part 1 - XML Example of usage: 
