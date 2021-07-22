@@ -18,19 +18,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.luisfalmeida.circleindicator.CircleIndicator
-        android:id="@+id/indicator"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:background="@color/white"
-        app:ci_width="12dp"
-        app:ci_height="4dp"
-        app:ci_deselected_width="4dp"
-        app:ci_deselected_height="4dp"
-        app:ci_drawable="@drawable/ic_dot_black"
-        app:ci_drawable_unselected="@drawable/ic_dot_gray"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_image_gallery"
-        app:layout_constraintStart_toStartOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
