@@ -10,9 +10,25 @@ The main goals of this personal project were:
 
 <img src="circle_indicator.gif" width="280">
 
-Usages:
+## Usage:
 
-### Part 1 - XML Example of usage: 
+### Part 1 - Installation: 
+```
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+```
+dependencies {
+	        implementation 'com.github.luisAlmeidaf:CircleIndicator:v1.0.2'
+	}
+```
+
+### Part 2 - XML Example of usage: 
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -52,21 +68,21 @@ Usages:
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-### Part 2: Create recyclerview and circleIndicator
+### Part 3: Create recyclerview and circleIndicator
 
 ```
 val recyclerView = findViewById(R.id.rv_image_gallery)
 val circleIndicator = findViewById(R.id.indicator)
 ```
 
-### Part 3: Create and attach Snap Helper
+### Part 4: Create and attach Snap Helper
 
 ```
 pagerSnapHelper = PagerSnapHelper()
 pagerSnapHelper.attachToRecyclerView(recyclerView)
 ```
 
-### Part 4: Set recyclerview
+### Part 5: Set recyclerview
 
 ```
 recyclerView.apply {
