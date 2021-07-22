@@ -1,4 +1,4 @@
-package com.luisfalmeida.circleindicator.circleindicator.model
+package com.luisfalmeida.circleindicator.model
 
 import android.view.Gravity
 import android.widget.LinearLayout

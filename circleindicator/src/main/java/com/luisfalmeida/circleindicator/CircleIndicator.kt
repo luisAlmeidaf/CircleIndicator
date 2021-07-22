@@ -1,4 +1,4 @@
-package com.luisfalmeida.circleindicator.circleindicator
+package com.luisfalmeida.circleindicator
 
 import android.annotation.TargetApi
 import android.content.Context

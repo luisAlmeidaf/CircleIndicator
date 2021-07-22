@@ -1,4 +1,4 @@
-package com.luisfalmeida.circleindicator.circleindicator
+package com.luisfalmeida.circleindicator
 
 import android.animation.Animator
 import android.animation.AnimatorInflater
@@ -20,9 +20,8 @@ import androidx.annotation.Nullable
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.core.view.ViewCompat
-import com.luisfalmeida.circleindicator.R
-import com.luisfalmeida.circleindicator.circleindicator.model.Config
-import com.luisfalmeida.circleindicator.circleindicator.model.IndicatorStyle
+import com.luisfalmeida.circleindicator.model.Config
+import com.luisfalmeida.circleindicator.model.IndicatorStyle
 import kotlin.math.abs
 
 open class BaseCircleIndicator : LinearLayout {
